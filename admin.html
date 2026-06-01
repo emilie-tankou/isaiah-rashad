@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Isaiah Rashad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="admin">
+
+    <header class="admin-header">
+      <h1>Isaiah Rashad</h1>
+      <p>Portail Administration — Dates de tournée</p>
+      <button id="logout-btn" class="btn-cancel">Déconnexion</button>
+    </header>
+
+    <!-- FORMULAIRE -->
+    <div class="admin-form">
+      <h2 id="form-titre">Ajouter une date</h2>
+      <div class="form-grille">
+        <input type="text" id="ville" placeholder="Ville" />
+        <input type="text" id="salle" placeholder="Salle / Venue" />
+        <input type="date" id="date" />
+        <input type="url" id="lien" placeholder="Lien billetterie (optionnel)" />
+      </div>
+      <div class="form-actions">
+        <button id="submit-btn" class="btn-add">Ajouter</button>
+        <button id="cancel-btn" class="btn-cancel" style="display:none">Annuler</button>
+      </div>
+    </div>
+
+    <!-- LISTE DES DATES -->
+    <div class="admin-liste">
+      <h2>Dates enregistrées</h2>
+      <div id="dates-admin"></div>
+    </div>
+
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
