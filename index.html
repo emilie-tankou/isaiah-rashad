@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Isaiah Rashad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sniglet&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- HERO -->
   <section id="hero">
-    <img src="images/artiste.jpg" alt="Isaiah Rashad" id="hero-bg">
+    <img src="images/ISAIAH.png" alt="Isaiah Rashad" id="hero-bg">
     <div class="hero-texte">
       <h1>IT’S BEEN AWFUL</h1>
     </div>
@@ -18,115 +19,220 @@
 
   <!-- NAVBAR -->
   <nav id="navbar">
-    <span class="nav-logo">Isaiah Rashad</span>
+    <span class="nav-logo"><img src="images/imagelogo.png" alt=""></span>
     <ul>
-      <li><a href="#shop">Shop</a></li>
       <li><a href="#dates">Dates</a></li>
-      <li><a href="#actualités">Actualités</a></li>
-      <li><a href="#media">Merch</a></li>
+      <li><a href="#Actualités">Actualités</a></li>
+      <li><a href="#Shop">Shop</a></li>
     </ul>
   </nav>
-
-  <!-- ALBUM DESCRIPTION -->
+   <!-- ALBUM DESCRIPTION -->
+<section class="album-tracklist-section">
   <section id="album">
-  <div class="album-parallax-container">
-    <img src="images/pochette.png" alt="Vinyle" id="album-vinyl">
-    <p class="out-now">OUT NOW</p>
+    <div class="album-parallax-container">
+      <img src="images/pochette.png" alt="Vinyle" id="album-vinyl">
+      <p class="out-now">Out Now</p>
+    </div>
+    <div class="album-plateformes">
+      <a href="https://open.spotify.com/intl-fr/album/2ZDgH9uDdjRFNdjEyQCZtH" target="_blank">
+        <img src="images/Spotify.png" alt="Spotify">
+      </a>
+      <a href="https://www.youtube.com/@isaiahrashad8600" target="_blank">
+        <img src="images/youtube.png" alt="YouTube"> 
+      </a>
+      <a href="https://www.deezer.com/search/isaiah%20rashad" target="_blank">
+        <img src="images/Deezer.png" alt="Deezer">
+      </a>
+    </div>
+  </section>
+
+  <!-- TRACKLIST -->
+<section id="tracklist">
+  <div class="tracklist-container">
+    <div class="tracklist-gauche">
+      <img src="images/pochettespotify.png" alt="It's Been Awful">
+      <div class="tracklist-info">
+        <h3>It's Been Awful</h3>
+        <p>Isaiah Rashad</p>
+        <a href="https://open.spotify.com/intl-fr/album/2ZDgH9uDdjRFNdjEyQCZtH" target="_blank" class="btn btn-spotify">
+          <img src="images/Spotify.png" alt="Spotify">
+        </a>
+      </div>
+    </div>
+    <div class="tracklist-droite">
+      <ol class="track-liste">
+        <li>THE NEW SUBLIME</li>
+        <li>M.O.M.</li>
+        <li>SAME SH!T</li>
+        <li>BOY IN RED <span>feat. SZA</span></li>
+        <li>SUPAFICIAL</li>
+        <li>SCARED 2 LOOK DOWN</li>
+        <li>HAPPY HOUR</li>
+        <li>DO I LOOK HIGH? <span>feat. Julian Sintonia</span></li>
+        <li>AIN'T GIVIN' UP</li>
+        <li>GTKY</li>
+        <li>CAMERAS <span>feat. Dominic Fike</span></li>
+        <li>ACT NORMAL</li>
+        <li>10 STATES AWAY</li>
+        <li>NUTHIN 2 HIDE</li>
+        <li>SUPERPWRS</li>
+        <li>719 FREESTYLE</li>
+      </ol>
+    </div>
   </div>
 </section>
 
-  <!-- TRACKLIST -->
-  <section id="tracklist">
-    <h2>Tracklist</h2>
-    <ol class="track-liste">
-      <li>Titre 1</li>
-      <li>Titre 2</li>
-      <li>Titre 3</li>
-      <li>Titre 4</li>
-      <li>Titre 5</li>
-    </ol>
-  </section>
+</section>
 
-  <!-- PHOTOS & VIDEOS -->
+</section>
+  <!-- PHOTOS -->
   <section id="medias">
-    <h2>Photos & Vidéos</h2>
-    <div class="galerie">
-      <img src="images/photo1.jpg" alt="Photo 1">
-      <img src="images/photo2.jpg" alt="Photo 2">
-      <img src="images/photo3.jpg" alt="Photo 3">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
-    </div>
-  </section>
+  <div class="galerie-masonry">
+    <div class="g1"><img src="images/imagegrille1.jpg" alt="Photo 1"></div>
+    <div class="g2"><img src="images/imagegrille2.jpg" alt="Photo 2"></div>
+    <div class="g3"><img src="images/imagegrille3.jpg" alt="Photo 3"></div>
+    <div class="g4"><img src="images/imagegrille4.jpg" alt="Photo 4"></div>
+    <div class="g5"><img src="images/imagegrille5.jpg" alt="Photo 5"></div>
+    <div class="g6"><img src="images/imagegrille6.jpg" alt="Photo 6"></div>
+    <div class="g7"><img src="images/imagegrille7.jpg" alt="Photo 7"></div>
+    <div class="g8"><img src="images/imagegrille8.jpg" alt="Photo 8"></div>
+    <div class="g9"><img src="images/imagegrille9.jpg" alt="Photo 9"></div>
+  </div>
+</section>
+ <section id="Shop">
+  <div class="shop-contenu">
+    <h2 class="shop-titre">Shop</h2>
+    <div class="shop-grille">
 
-  <!-- MERCH & STORE -->
-  <section id="merch">
-    <h2>Merch & Store</h2>
-    <div class="merch-grille">
-      <div class="merch-item">
-        <img src="images/merch1.jpg" alt="T-shirt">
-        <p>T-shirt</p>
-        <span>30€</span>
-        <a href="#" class="btn">Acheter</a>
+      <div class="shop-item">
+        <div class="shop-card-inner">
+          <div class="shop-card-front">
+            <img src="images/teeshirt.png" alt="Tee-shirt">
+          </div>
+          <div class="shop-card-back">
+            <img src="images/teeshirt.png" alt="Tee-shirt">
+          </div>
+        </div>
+        <p class="shop-nom">IBA Tee-Shirt Tour — Noir</p>
+        <span class="shop-prix">45.00 $</span>
       </div>
-      <div class="merch-item">
-        <img src="images/merch2.jpg" alt="Vinyle">
-        <p>Vinyle</p>
-        <span>25€</span>
-        <a href="#" class="btn">Acheter</a>
-      </div>
-      <div class="merch-item">
-        <img src="images/merch3.jpg" alt="Hoodie">
-        <p>Hoodie</p>
-        <span>55€</span>
-        <a href="#" class="btn">Acheter</a>
-      </div>
-    </div>
-  </section>
 
+      <div class="shop-item">
+        <div class="shop-card-inner">
+          <div class="shop-card-front">
+            <img src="images/pullshop1.png" alt="Pull recto">
+          </div>
+          <div class="shop-card-back">
+            <img src="images/pullshop2.png" alt="Pull verso">
+          </div>
+        </div>
+        <p class="shop-nom">IBA Hoodie - Anthracite</p>
+        <span class="shop-prix">65.00 $</span>
+      </div>
+
+      <div class="shop-item">
+        <div class="shop-card-inner">
+          <div class="shop-card-front">
+            <img src="images/vinylshop.png" alt="Vinyle">
+          </div>
+          <div class="shop-card-back">
+            <img src="images/vinylshop.png" alt="Vinyle">
+          </div>
+        </div>
+        <p class="shop-nom">It's Been Awful — Vinyle</p>
+        <span class="shop-prix">28.00 $</span>
+      </div>
+
+    </div>
+  </div>
+</section>
   <!-- DATES TOURNEE -->
-  <section id="tournee">
-    <h2>Dates de tournée</h2>
-    <div class="dates-liste" id="dates-container">
-      <!-- Les dates seront chargées depuis Firestore -->
+<section id="Dates">
+  <h2 class="tournee-titre">Dates</h2>
+  <div class="tournee-contenu">
+
+    <!-- AFFICHE -->
+    <div class="tournee-affiche">
+      <img src="images/isaiahaffiche.jpg" alt="Affiche tournée">
     </div>
-  </section>
+
+    <!-- DATES -->
+    <div class="tournee-dates">
+      <h3>Dates des Tournées</h3>
+      <div id="dates-container">
+        <!-- chargées depuis l'API -->
+      </div>
+      <button class="voir-plus" id="voir-plus-btn">+ Voir plus de dates</button>
+    </div>
+
+  </div>
+</section>
 
   <!-- BLOG -->
-  <section id="blog">
-    <h2>Actualités</h2>
-    <div class="blog-grille">
-      <article class="blog-card">
-        <img src="images/blog1.jpg" alt="Article 1">
-        <div class="blog-card-texte">
-          <span class="date">01 Juin 2026</span>
-          <h3>Titre de l'article</h3>
-          <p>Résumé de l'article...</p>
-          <a href="#" class="btn">Lire la suite</a>
-        </div>
-      </article>
-      <article class="blog-card">
-        <img src="images/blog2.jpg" alt="Article 2">
-        <div class="blog-card-texte">
-          <span class="date">15 Mai 2026</span>
-          <h3>Titre de l'article</h3>
-          <p>Résumé de l'article...</p>
-          <a href="#" class="btn">Lire la suite</a>
-        </div>
-      </article>
-    </div>
-  </section>
+<section id="Actualités">
+  <div class="blog-contenu">
+    <h2 class="blog-titre">Dernières<br>Actu</h2>
+    <div class="blog-slider">
 
-  <!-- FOOTER -->
-  <footer id="footer">
-  <span class="footer-logo">Isaiah Rashad</span>
-  <div class="reseaux">
-    <a href="#" target="_blank">Instagram</a>
-    <a href="#" target="_blank">Twitter</a>
-    <a href="#" target="_blank">Spotify</a>
-    <a href="#" target="_blank">YouTube</a>
+      <!-- ARTICLE 1 -->
+      <article class="blog-card">
+        <img src="images/imageactu1.png" alt="Article 1">
+        <div class="blog-card-texte">
+          <span class="blog-source">Événement · 23 juin 2026 · 19h30</span>
+          <h3>Nouvelle date — Los Angeles, GRAMMY Museum</h3>
+          <p>Isaiah Rashad s'installe au GRAMMY Museum de Los Angeles pour une soirée Spotlight intime. Un format rare, dans un lieu d'exception - les billets partent vite. Lien en bio.</p>
+          <span class="blog-hashtags">#SpotlightIsaiahRashad #LosAngeles #GRAMMYMuseum</span>
+        </div>
+      </article>
+
+      <!-- ARTICLE 2 -->
+      <article class="blog-card">
+        <img src="images/imageactu2.png" alt="Article 2">
+        <div class="blog-card-texte">
+          <span class="blog-source">YouTube · 10 avril 2026</span>
+          <h3>Nouvelle vidéo — "Same Sh!t" (Clip officiel)</h3>
+          <p>Le premier clip de It's Been Awful vient d'atterrir. "Same Sh!t" pose le ton de l'album : production dense, flow introspectif, et une énergie qui rappelle le Rashad des grandes heures.</p>
+          <span class="blog-hashtags">#IsaiahRashad #SameSht #ItsBeenAwful #TDE</span>
+        </div>
+      </article>
+
+      <!-- ARTICLE 3 -->
+      <article class="blog-card">
+        <img src="images/imageactu3.png" alt="Article 3">
+        <div class="blog-card-texte">
+          <span class="blog-source">Instagram · Mai 2026</span>
+          <h3>Nouveau post — Message de Zay à ses fans</h3>
+          <p>Isaiah a partagé une note manuscrite sur ses réseaux : "Everybody wants to see you crash out, fall off, and burn out for their entertainment. I just want to see you smile." — tirée du making-of de l'album.</p>
+          <span class="blog-hashtags">#ItsBeenAwful #IsaiahRashad #TDE</span>
+        </div>
+      </article>
+
+    </div>
   </div>
-  <p class="copyright">© 2026 Isaiah Rashad. Tous droits réservés.</p>
-  <a href="login.html" class="btn-admin">Connexion</a>
+</section>
+
+  <footer id="footer">
+  <div class="footer-reseaux">
+    <a href="https://www.instagram.com/isaiahrashadTDE" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@IsaiahRashad" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+    </a>
+    <span class="footer-album">It's Been Awful</span>
+    <a href="https://www.tiktok.com/@isaiahrashadTDE" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+    </a>
+    <a href="https://twitter.com/IsaiahRashad" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+  </div>
+  <div class="footer-links">
+    <a href="#">Terms of use</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Cookie</a>
+    <a href="login.html" class="footer-connexion">Connexion</a>
+  </div>
 </footer>
 
   <script type="module" src="script.js"></script>

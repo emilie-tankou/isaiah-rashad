@@ -4,17 +4,256 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin — Isaiah Rashad</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      min-height: 100vh;
+    }
+
+    .admin {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* HEADER */
+    .admin-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .admin-header h1 {
+      font-family: 'Boldonse', cursive;
+      font-size: 1.8rem;
+      color: #f97316;
+      letter-spacing: 2px;
+    }
+
+    .admin-header p {
+      font-size: 0.8rem;
+      color: #6b7280;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    .admin-header-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* LISTE DES DATES */
+    .admin-liste {
+      margin-bottom: 50px;
+    }
+
+    .admin-liste h2 {
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 15px;
+    }
+
+    .date-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      background-color: #111111;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      border: 1px solid #1f1f1f;
+      transition: border-color 0.2s;
+    }
+
+    .date-item:hover {
+      border-color: #2d2d2d;
+    }
+
+    .date-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .date-date {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #f97316;
+      min-width: 100px;
+    }
+
+    .date-ville {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .date-salle {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .date-info a {
+      font-size: 0.75rem;
+      color: #c4b5fd;
+      text-decoration: underline;
+    }
+
+    .date-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* FORMULAIRE */
+    .admin-form {
+      background-color: #111111;
+      border: 1px solid #1f1f1f;
+      border-radius: 12px;
+      padding: 30px;
+    }
+
+    .admin-form h2 {
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .form-grille {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .form-grille input {
+      background-color: #1a1a1a;
+      border: 1px solid #2d2d2d;
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: #f0f0f0;
+      font-size: 0.9rem;
+      font-family: 'Roboto', sans-serif;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .form-grille input:focus {
+      border-color: #f97316;
+    }
+
+    .form-grille input::placeholder {
+      color: #4b5563;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* BOUTONS */
+    .btn-add {
+      padding: 12px 28px;
+      background-color: #f97316;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-add:hover {
+      background-color: #ea6c0a;
+    }
+
+    .btn-cancel {
+      padding: 12px 28px;
+      background-color: transparent;
+      color: #9ca3af;
+      border: 1px solid #2d2d2d;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-family: 'Roboto', sans-serif;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-cancel:hover {
+      border-color: #f97316;
+      color: #f97316;
+    }
+
+    .btn-edit {
+      padding: 6px 14px;
+      background-color: transparent;
+      border: 1px solid #2d2d2d;
+      color: #9ca3af;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-edit:hover {
+      border-color: #f97316;
+      color: #f97316;
+    }
+
+    .btn-delete {
+      padding: 6px 14px;
+      background-color: transparent;
+      border: 1px solid #2d2d2d;
+      color: #9ca3af;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-delete:hover {
+      border-color: #ef4444;
+      color: #ef4444;
+    }
+
+    .vide {
+      text-align: center;
+      color: #4b5563;
+      padding: 30px;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
 
   <div class="admin">
 
     <header class="admin-header">
-      <h1>Isaiah Rashad</h1>
-      <p>Portail Administration — Dates de tournée</p>
+      <div class="admin-header-left">
+        <h1>Isaiah Rashad</h1>
+        <p>Portail Administration — Dates de tournée</p>
+      </div>
       <button id="logout-btn" class="btn-cancel">Déconnexion</button>
     </header>
+
+    <!-- LISTE DES DATES -->
+    <div class="admin-liste">
+      <h2>Dates enregistrées</h2>
+      <div id="dates-admin"></div>
+    </div>
 
     <!-- FORMULAIRE -->
     <div class="admin-form">
@@ -29,12 +268,7 @@
         <button id="submit-btn" class="btn-add">Ajouter</button>
         <button id="cancel-btn" class="btn-cancel" style="display:none">Annuler</button>
       </div>
-    </div>
-
-    <!-- LISTE DES DATES -->
-    <div class="admin-liste">
-      <h2>Dates enregistrées</h2>
-      <div id="dates-admin"></div>
+      <p id="form-error"></p>
     </div>
 
   </div>
