@@ -2,11 +2,13 @@
 import { apiFetch, setToken } from './api.js';
 
 const errorEl = document.getElementById('login-error');
+const loginBtn = document.getElementById('login-btn');
 
-document.getElementById('login-btn').addEventListener('click', async () => {
+loginBtn.addEventListener('click', async () => {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
-  errorEl.textContent = '';
+  loginBtn.disabled = true;
+  errorEl.textContent = 'Connexion en cours… (le serveur peut mettre jusqu\'à une minute à se réveiller)';
 
   try {
     const { token } = await apiFetch('/login_check', {
@@ -19,5 +21,6 @@ document.getElementById('login-btn').addEventListener('click', async () => {
     errorEl.textContent = error.status === 401
       ? 'Email ou mot de passe incorrect'
       : 'Serveur indisponible, réessaie dans un instant';
+    loginBtn.disabled = false;
   }
 });

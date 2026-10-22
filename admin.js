@@ -53,6 +53,7 @@ function init() {
   }
 
   async function loadDates() {
+    container.innerHTML = '<p class="vide">Chargement…</p>';
     try {
       dates = await apiFetch('/dates');
       render();

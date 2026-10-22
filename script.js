@@ -4,6 +4,7 @@ import { apiFetch, escapeHtml, formatDate, safeUrl } from './api.js';
 const datesContainer = document.getElementById('dates-container');
 
 async function loadDates() {
+  datesContainer.innerHTML = '<p class="vide">Chargement des dates… (le serveur gratuit peut mettre jusqu\'à une minute à se réveiller)</p>';
   try {
     const dates = await apiFetch('/dates');
 
