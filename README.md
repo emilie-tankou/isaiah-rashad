@@ -2,7 +2,7 @@
 
 Site vitrine d'artiste avec un **portail d'administration** pour gérer les dates de tournée. Le front est en JavaScript « vanilla » (sans framework) et consomme une **API REST Symfony** que j'ai développée.
 
-> 🔗 **Site en ligne** : _à compléter après le déploiement_
+> 🔗 **Site en ligne** :[isaiah-rashad.vercel.app](https://isaiah-rashad.vercel.app)
 > 🧩 **API (back-end)** : [isaiah-rashad-api](https://github.com/emilie-tankou/isaiah-rashad-api)
 > ⏱️ L'API est hébergée gratuitement : la première visite après une période d'inactivité peut prendre jusqu'à une minute.
 
