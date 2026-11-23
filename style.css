@@ -121,11 +121,25 @@ section {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   text-align: center;
-  color: #9ca3af;
+  color: #e5e7eb;
   font-size: 0.8rem;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   animation: bounce 2s infinite;
+  transition: color 0.3s;
+}
+
+.scroll-indicator:hover {
+  color: #c4b5fd;
+}
+
+.scroll-indicator svg {
+  width: 34px;
+  height: 34px;
 }
 
 @keyframes bounce {
@@ -270,7 +284,7 @@ section {
   display: flex;
   gap: 30px;
   max-width: 1100px;
-  height: 550px;
+  min-height: 550px;
   margin: 0 auto;
   align-items: stretch;
   background-color: #F47838;
@@ -290,7 +304,8 @@ section {
 
 .tracklist-gauche img {
   width: 100%;
-  height: 200px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
@@ -318,27 +333,29 @@ section {
 }
 
 .btn-spotify {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background-color: transparent;
-  color: white;
-  padding: 8px 0;
-  font-size: 1rem;
-  border-radius: 0;
-  margin-top: 10px;
+  justify-content: center;
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 28px;
+  border-radius: 30px;
+  margin-top: 14px;
   width: auto;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-spotify img {
-  width: 20px !important;
-  height: 20px !important;
+  width: auto !important;
+  height: 34px !important;
   object-fit: contain !important;
+  border-radius: 0 !important;
 }
 
 .btn-spotify:hover {
-  opacity: 0.8;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .tracklist-droite {
@@ -955,6 +972,19 @@ section {
   color: #ef4444;
   font-size: 0.85rem;
   min-height: 20px;
+}
+
+.btn-retour {
+  display: inline-block;
+  margin-top: 28px;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.btn-retour:hover {
+  color: #c4b5fd;
 }
 
 /* ===== BOUTON ADMIN FOOTER ===== */

@@ -191,7 +191,19 @@
       cursor: pointer;
       transition: all 0.3s;
     }
+    .admin-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
+    a.btn-cancel {
+      display: inline-block;
+      text-decoration: none;
+    }
+    
     .btn-cancel:hover {
       border-color: #f97316;
       color: #f97316;
@@ -246,7 +258,10 @@
         <h1>Isaiah Rashad</h1>
         <p>Portail Administration — Dates de tournée</p>
       </div>
-      <button id="logout-btn" class="btn-cancel">Déconnexion</button>
+     <div class="admin-header-actions">
+        <a href="index.html" class="btn-cancel btn-retour-site">← Retour au site</a>
+        <button id="logout-btn" class="btn-cancel">Déconnexion</button>
+      </div>
     </header>
 
     <!-- LISTE DES DATES -->
