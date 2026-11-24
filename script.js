@@ -3,7 +3,7 @@ import { apiFetch, escapeHtml, formatDate, safeUrl } from './api.js';
 
 const datesContainer = document.getElementById('dates-container');
 const seeMoreBtn = document.getElementById('voir-plus-btn');
-const MAX_VISIBLE = 4; // nombre de dates affichées avant « Voir plus »
+const MAX_VISIBLE = 6; // nombre de dates affichées avant « Voir plus »
 
 let expanded = false;
 
