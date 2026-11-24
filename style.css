@@ -665,8 +665,22 @@ section {
 }
 
 .tournee-dates {
-  flex: 1;
-  max-width: 500px;
+   flex: 1;
+  max-width: 800px;
+  min-width: 0;
+}
+
+/* Affichage des dates en 2 colonnes */
+#dates-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 30px;
+  width: 100%;
+}
+
+.date-item {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 
 .tournee-dates h3 {
@@ -744,6 +758,10 @@ section {
 
   .tournee-affiche img {
     width: 220px;
+  }
+
+  #dates-container {
+  grid-template-columns: 1fr;
   }
 }
 
