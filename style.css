@@ -620,7 +620,10 @@ section {
   color: #f97316;
   font-weight: 700;
 }
+
+
 /* ===== TOURNEE ===== */
+
 #Dates {
   background-color: #f97316;
   padding: 80px 5%;
@@ -639,7 +642,6 @@ section {
   line-height: 0.85;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  text-align: left;
   margin: 0;
   font-family: 'Boldonse', cursive;
 }
@@ -664,8 +666,9 @@ section {
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
+
 .tournee-dates {
-   flex: 1;
+  flex: 1;
   max-width: 800px;
   min-width: 0;
 }
@@ -691,39 +694,52 @@ section {
   letter-spacing: 2px;
 }
 
-.date-item {
-  padding: 15px 0;
+/* Deux colonnes sur ordinateur */
+#Dates #dates-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+  row-gap: 10px;
+  width: 100%;
+  align-items: start;
 }
 
-.date-item.date-cachee {
+#Dates .date-item {
+  display: block;
+  min-width: 0;
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+
+#Dates .date-item.date-cachee {
   display: none;
 }
 
-.date-item .date-date {
+#Dates .date-item .date-date,
+#Dates .date-item .date-ville,
+#Dates .date-item .date-salle {
+  display: block;
+}
+
+#Dates .date-item .date-date {
   font-size: 1rem;
   font-weight: 700;
   color: #ffffff;
-  display: block;
   margin-bottom: 4px;
 }
 
-.date-item .date-salle {
+#Dates .date-item .date-salle {
   font-size: 0.85rem;
   color: rgba(255,255,255,0.7);
-  display: block;
   margin-bottom: 6px;
 }
 
-.date-item a {
+#Dates .date-item a {
   font-size: 0.8rem;
   color: #ffffff;
   display: inline-block;
   padding-bottom: 2px;
   border-bottom: 1px solid #ffffff;
-}
-
-.date-item a:hover {
-  opacity: 0.7;
 }
 
 .voir-plus {
@@ -735,16 +751,13 @@ section {
   font-weight: 600;
   cursor: pointer;
   letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .voir-plus:hover {
   opacity: 0.7;
 }
 
-/* RESPONSIVE */
+/* Une colonne sur mobile */
 @media (max-width: 768px) {
   .tournee-titre {
     font-size: 6rem;
@@ -760,10 +773,22 @@ section {
     width: 220px;
   }
 
+
   #dates-container {
-  grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
-}
+
+  .tournee-dates {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  #Dates #dates-container {
+    grid-template-columns: 1fr;
+  }
+  }
+
+
 
 /* ===== BLOG ===== */
 #Actualités {
@@ -867,6 +892,7 @@ section {
   .blog-slider {
     width: 100%;
   }
+
 }
 /* ===== FOOTER ===== */
 #footer {
@@ -1152,3 +1178,15 @@ section {
     gap: 5px;
   }
 }
+<<<<<<< HEAD
+=======
+#Dates {
+  background-color: blue !important;
+}
+
+#Dates #dates-container {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  border: 5px solid red !important;
+}
+>>>>>>> e364b33 (Update JavaScript and CSS files)
